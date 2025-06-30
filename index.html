@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume with Certificates</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans text-gray-800">
+
+  <!-- Academic Qualification Section -->
+  <div class="max-w-3xl mx-auto mt-10 p-6 bg-white rounded-xl shadow-md">
+    <h2 class="text-2xl font-bold text-blue-800 mb-4">📘 Academic & Technical Qualification</h2>
+
+    <ul class="list-disc list-inside space-y-3 text-lg">
+      <li>
+        <button onclick="showMarksheet('high')" class="text-blue-600 hover:underline font-semibold">
+          High School (2015)
+        </button>
+      </li>
+      <li>
+        <button onclick="showMarksheet('inter')" class="text-blue-600 hover:underline font-semibold">
+          Intermediate (2017)
+        </button>
+      </li>
+      <li>
+        <button onclick="showMarksheet('diploma1')" class="text-blue-600 hover:underline font-semibold">
+          Diploma in Electrical & Electronics (2021)
+        </button>
+      </li>
+      <li>
+        <button onclick="showMarksheet('diploma2')" class="text-blue-600 hover:underline font-semibold">
+          Diploma Consolidated Marksheet
+        </button>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Academic Marksheet Viewers -->
+  <div id="high" class="hidden max-w-md mx-auto mt-6 p-4 bg-white rounded-lg shadow-lg">
+    <h3 class="text-xl font-bold text-blue-700 mb-2">📄 High School Marksheet</h3>
+    <img src="high_school_marksheet.jpg" alt="High School Marksheet" class="w-full border" />
+  </div>
+
+  <div id="inter" class="hidden max-w-md mx-auto mt-6 p-4 bg-white rounded-lg shadow-lg">
+    <h3 class="text-xl font-bold text-blue-700 mb-2">📄 Intermediate Marksheet</h3>
+    <img src="intermediate-marksheet.jpg" alt="Intermediate Marksheet" class="w-full border" />
+  </div>
+
+  <div id="diploma1" class="hidden max-w-5xl mx-auto mt-6 p-4 bg-white rounded-lg shadow-lg">
+    <h3 class="text-xl font-bold text-blue-700 mb-2">📄 Diploma (EEE) Semester-wise Marksheet</h3>
+    <img src="diploma-marksheet.jpg" alt="Diploma Semester-wise Marksheet" class="w-full border" />
+  </div>
+
+  <div id="diploma2" class="hidden max-w-5xl mx-auto mt-6 p-4 bg-white rounded-lg shadow-lg">
+    <h3 class="text-xl font-bold text-blue-700 mb-2">📄 Diploma Consolidated Marksheet</h3>
+    <img src="diploma.jpg" alt="Diploma Consolidated Marksheet" class="w-full border" />
+  </div>
+
+  <!-- 🆕 Training & Certification Section -->
+  <div class="max-w-3xl mx-auto mt-10 p-6 bg-white rounded-xl shadow-md">
+    <h2 class="text-2xl font-bold text-blue-800 mb-4">💼 Training & Certification</h2>
+
+    <ul class="list-disc list-inside space-y-3 text-lg">
+      <li>
+        <button onclick="showMarksheet('teknevigators')" class="text-blue-600 hover:underline font-semibold">
+          SCADA & Embedded Systems – Teknevigators
+        </button>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Certificate Viewer -->
+  <div id="teknevigators" class="hidden max-w-4xl mx-auto mt-6 p-4 bg-white rounded-lg shadow-lg">
+    <h3 class="text-xl font-bold text-blue-700 mb-2">📄 Teknevigators Training Certificate</h3>
+    <img src="Training_Certificate.jpg"
+            width="100%" height="500px"
+            class="border rounded-md"></img>
+  </div>
+
+  <!-- Show Marksheet Script -->
+  <script>
+    function showMarksheet(id) {
+      const sections = ['high', 'inter', 'diploma1', 'diploma2', 'teknevigators'];
+      sections.forEach(sec => {
+        const el = document.getElementById(sec);
+        if (el) el.classList.add('hidden');
+      });
+      document.getElementById(id).classList.remove('hidden');
+    }
+  </script>
+
+</body>
+</html>
